@@ -90,3 +90,50 @@ Prisma Studio is up on http://localhost:5555
 - We need to put the database in `.gitignore`
 - [Prisma Studio Docs](https://www.prisma.io/docs/concepts/components/prisma-studio)
 - For Postgres see video
+
+```bash
+commit 054345019178be22c902c34ea1eeebae4a8155c9 (HEAD -> master)
+Author: victorkane <victorkane@gmail.com>
+Date:   Sun Oct 15 19:23:36 2023 -0300
+
+    Project and Prisma setup with SQLite
+
+ .env.example                          |   7 +
+ .gitignore                            |   1 +
+ .prettierrc                           |  11 ++
+ .vscode/settings.json                 |   3 +
+ README.md                             |  98 +++++++---
+ app/globals.css                       |  24 ---
+ app/page.tsx                          | 112 +-----------
+ lib/prisma.ts                         |  11 ++
+ lib/todos.ts                          |  10 +
+ package.json                          |  14 +-
+ pnpm-lock.yaml                        | 105 +++++++++++
+ prisma/dev.db                         | Bin 0 -> 20480 bytes
+ prisma/dev.db-journal                 | Bin 0 -> 8720 bytes
+ .../20231015215957_init/migration.sql |   8 +
+ prisma/migrations/migration_lock.toml |   3 +
+ prisma/schema.prisma                  |  19 ++
+ 16 files changed, 267 insertions(+), 159 deletions(-)
+```
+
+### Fetch all todos from the db
+
+- Go to Prisma Studio at `http://localhost:5555/` and create three todos
+  manually
+
+```bash
+victor@victorpc:next-ts-prisma$ pnpx prisma studio
+Packages: +2
+++
+Progress: resolved 2, reused 2, downloaded 0, added 2, done
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Prisma Studio is up on http://localhost:5555
+```
+
+We can now see them on home page at `http://localhost:3000/`
+
+```bash
+commit
+```
