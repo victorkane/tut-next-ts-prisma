@@ -1,5 +1,7 @@
 ## Server actions, RSC, Prisma, and TypeScript in NextJs 13
 
+- [YT Hamed Bahram 2023-05-28 Server actions, RSC, Prisma, and TypeScript in NextJs 13](https://youtu.be/8e35eo447Zw?si=RuvpkUrczzCDMWAl)
+
 ### Project and Prisma setup with SQLite instead of Postgres
 
 - Working at `~Work/Learn/NextJS/NextJS-2023/HamedBahram/dev/next-ts-prisma`
@@ -135,5 +137,15 @@ Prisma Studio is up on http://localhost:5555
 We can now see them on home page at `http://localhost:3000/`
 
 ```bash
-commit
+commit ba0c6d2295a94b13c2d8b72ef5704c1d84438589 (HEAD -> master)
+Author: victorkane <victorkane@gmail.com>
+Date:   Sun Oct 15 19:43:48 2023 -0300
+
+    feat: fetch all todos entered manually via Prisma Studio into the database
+
+ README.md             |  47 ++++++++++++++++++++++++++++
+ app/page.tsx          |  17 ++++++++--
+ prisma/dev.db         | Bin 20480 -> 20480 bytes
+ prisma/dev.db-journal | Bin 8720 -> 0 bytes
+ 4 files changed, 61 insertions(+), 3 deletions(-)
 ```
