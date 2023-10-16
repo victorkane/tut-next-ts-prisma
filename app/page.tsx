@@ -1,5 +1,6 @@
 import { getTodos } from '@/lib/todos'
 import TodoItem from '@/components/TodoItem'
+import NewTodoForm from '@/components/NewTodoForm'
 
 export default async function Home() {
   const { todos } = await getTodos()
@@ -9,6 +10,8 @@ export default async function Home() {
         <h1 className='mb-10 w-fit bg-slate-100 px-2 text-3xl font-bold text-slate-800'>
           Todos
         </h1>
+
+        <NewTodoForm />
         <h2 className='mt-10 border-b pb-2 text-xl font-semibold'>
           Previous todos:
         </h2>
