@@ -227,4 +227,28 @@ Date:   Mon Oct 16 07:30:16 2023 -0300
 ```
 
 - New todo doesn't appear in list right away
+
+```bash
+commit a58c80332ed30a19b46b88a915f31d2dfd109c65 (HEAD -> main, origin/main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 07:36:56 2023 -0300
+
+    fix(server actions): created todo appears directly on home page todo listing
+
+ README.md       | 20 ++++++++++++++++++++
+ app/_actions.ts |  1 +
+ 2 files changed, 21 insertions(+)
+```
+
 - Form input field needs to be reset
+
+```bash
+commit 20925d1b5c4ea1ff5dadf9007701507f2ff220e0 (HEAD -> main, origin/main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 07:44:29 2023 -0300
+
+    fix(server actions): reset the form title input field upon creating new todo
+
+ app/components/NewTodoForm.tsx | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+```
