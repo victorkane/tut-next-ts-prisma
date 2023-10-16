@@ -149,3 +149,18 @@ Date:   Sun Oct 15 19:43:48 2023 -0300
  prisma/dev.db-journal | Bin 8720 -> 0 bytes
  4 files changed, 61 insertions(+), 3 deletions(-)
 ```
+
+- adding types for abstracted `TodoItem` component
+
+```bash
+commit a05db35c42fd853fecf91a239b4f39654d2daeaa (HEAD -> main, origin/main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 04:03:20 2023 -0300
+
+    chore: abstract out TodoItem component in true Next.js 13 fashion (adding types, working with types)
+
+ app/components/TodoItem.tsx | 11 +++++++++++
+ app/page.tsx                |  3 ++-
+ tsconfig.json               |  3 ++-
+ 3 files changed, 15 insertions(+), 2 deletions(-)
+```
