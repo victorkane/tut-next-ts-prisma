@@ -1,6 +1,19 @@
+'use client'
+
+import { createTodoAction } from '@/app/_actions'
+
 const NewTodoForm = () => {
+  async function action(data: FormData) {
+    const title = data.get('title')
+    if (typeof title !== 'string' || !title) return
+
+    // call a server action to create a todo
+    await createTodoAction(title)
+    // reset the form
+  }
+
   return (
-    <form action=''>
+    <form action={action}>
       <h2 className='mb-2 font-medium'>Create a New Todo</h2>
       <input
         type='text'

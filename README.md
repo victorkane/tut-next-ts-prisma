@@ -164,3 +164,47 @@ Date:   Mon Oct 16 04:03:20 2023 -0300
  tsconfig.json               |  3 ++-
  3 files changed, 15 insertions(+), 2 deletions(-)
 ```
+
+### Server actions (create todo)
+
+```bash
+commit 29b6bd6069bbc4ce6beb7ec72ba7837f70ff8134 (HEAD -> main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 06:43:13 2023 -0300
+
+    chore: scaffold new todo form
+
+ app/components/NewTodoForm.tsx | 11 +++++++++++
+ app/page.tsx                   |  3 +++
+ 2 files changed, 14 insertions(+)
+```
+
+```bash
+commit 956a62caf53ddfbc275a3aafda8456754dc93d01 (HEAD -> main, origin/main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 06:52:30 2023 -0300
+
+    style: create new todo form styling via tailwind classes
+
+ app/components/NewTodoForm.tsx | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+```
+
+- > Server actions (a la Next.js 13, that run on the server and can be called
+  > from the client) instead of utilizing app api layer for `GET`, `POST`, etc.
+  > to database
+- Separate database model functions (`lib/todos.ts`) from server action
+  functions (`app/_actions.ts`) which can be called directly from client-side
+  components
+- Configure app for server actions feature (see following error)
+
+```text
+./app/_actions.ts
+Error:
+  × To use Server Actions, please enable the feature flag in your Next.js config. Read more: https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations#convention
+   ╭─[/home/victor/Work/Learn/NextJS/NextJS-2023/HamedBahram/dev/next-ts-prisma/app/_actions.ts:1:1]
+ 1 │ 'use server'
+   · ────────────
+ 2 │
+ 3 │ import { createTodo } from '@/lib/todos'
+```
