@@ -208,3 +208,23 @@ Error:
  2 │
  3 │ import { createTodo } from '@/lib/todos'
 ```
+
+- commit
+
+```bash
+commit edc194003e0dd1a3a4490072bf2304d6cf7bff42 (HEAD -> main, origin/main)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Oct 16 07:30:16 2023 -0300
+
+    feat(server actions): create todo
+
+ README.md                      | 44 ++++++++++++++++++++
+ app/_actions.ts                |  8 ++++
+ app/components/NewTodoForm.tsx | 15 ++++++-
+ lib/todos.ts                   |  9 ++++
+ next.config.js                 |  6 ++-
+ 5 files changed, 80 insertions(+), 2 deletions(-)
+```
+
+- New todo doesn't appear in list right away
+- Form input field needs to be reset
