@@ -1,8 +1,12 @@
 'use client'
 
+import { useRef } from 'react'
+
 import { createTodoAction } from '@/app/_actions'
 
 const NewTodoForm = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+
   async function action(data: FormData) {
     const title = data.get('title')
     if (typeof title !== 'string' || !title) return
@@ -10,10 +14,11 @@ const NewTodoForm = () => {
     // call a server action to create a todo
     await createTodoAction(title)
     // reset the form
+    formRef.current?.reset()
   }
 
   return (
-    <form action={action}>
+    <form ref={formRef} action={action}>
       <h2 className='mb-2 font-medium'>Create a New Todo</h2>
       <input
         type='text'
