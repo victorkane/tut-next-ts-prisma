@@ -1,4 +1,5 @@
 import { getTodos } from '@/lib/todos'
+import TodoItem from '@/components/TodoItem'
 
 export default async function Home() {
   const { todos } = await getTodos()
@@ -12,7 +13,7 @@ export default async function Home() {
           Previous todos:
         </h2>
         <ul className='mt-4 flex flex-col gap-1'>
-          {todos?.map(todo => <li key={todo.id}>{todo.title}</li>)}
+          {todos?.map(todo => <TodoItem key={todo.id} todo={todo} />)}
         </ul>
       </div>
     </section>
