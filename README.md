@@ -134,7 +134,7 @@ Prisma schema loaded from prisma/schema.prisma
 Prisma Studio is up on http://localhost:5555
 ```
 
-We can now see them on home page at `http://localhost:3000/`
+We can now see the titles listed on home page at `http://localhost:3000/`
 
 ```bash
 commit ba0c6d2295a94b13c2d8b72ef5704c1d84438589 (HEAD -> master)
